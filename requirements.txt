@@ -1,0 +1,7 @@
+viktor==14.6.1
+plotly
+kaleido==0.2.1
+geopandas
+numpy
+requests
+geopy
