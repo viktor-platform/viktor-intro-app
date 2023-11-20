@@ -1,3 +1,5 @@
+import json
+
 from geopy.geocoders import Nominatim
 import plotly.graph_objects as go
 import plotly.express as px
@@ -10,7 +12,7 @@ import numpy as np
 import math
 import text
 
-from viktor.utils import convert_word_to_pdf
+from viktor.utils import convert_word_to_pdf, render_jinja_template
 from viktor.external.word import WordFileTag, WordFileImage, render_word_file
 from viktor import ViktorController, File, progress_message
 from viktor.core import Color
@@ -508,13 +510,19 @@ class Controller(ViktorController):
 
 
     # Show final step
-    @WebView("What's next?", duration_guess=1)
+    @WebView("What's next?", duration_guess=10)
     def whats_next(self, **kwargs):
         """Initiates the process of rendering the "What's next?" tab."""
-        html_path = Path(__file__).parent / "final_step.html"
-        with html_path.open() as f:
-            html_string = f.read()
-        return WebResult(html=html_string)
+        html_path = Path(__file__).parent / "info_page" / "html_template.html"
+        input_path = Path(__file__).parent / "info_page" / "info_input.json"
+        with input_path.open() as f:
+            input_path = json.load(f)
+        with open(html_path, 'rb') as template:
+            html_file = render_jinja_template(template, input_path)
+        html_path = Path(__file__).parent / "info_page" / "html_sample.html"
+        with open(html_path, 'w') as sample:
+            sample.write(html_file.getvalue())
+        return WebResult(html=html_file.getvalue())
     
     #Use shoelace method to determine the area of any polygon
     @staticmethod
@@ -531,4 +539,3 @@ class Controller(ViktorController):
         area = abs(area) / 2
     
         return area
-  

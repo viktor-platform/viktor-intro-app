@@ -1,0 +1,45 @@
+{
+  "company_info": {
+    "name": "Company",
+    "logo": "https://docs.viktor.ai/img/viktor-logo-light.svg",
+    "primary_color": "#1e90ff",
+    "secondary_color": "#1b1d2f"
+  },
+  "administrators": [
+    {
+      "name": "John Doe",
+      "email": "john.doe@company.com",
+      "img_src": "https://media.licdn.com/dms/image/C5603AQFdKoZc74rnwA/profile-displayphoto-shrink_800_800/0/1626883365645?e=2147483647&v=beta&t=D5tXW8mAuk6ZNHEsGp7I9Jlu36n-p7u0VTLsdigqm1k"
+    },
+    {
+      "name": "Jane Doe",
+      "email": "jane.doe@company.com",
+      "img_src": "https://koteksolutions.org/wp-content/uploads/2018/07/blank-profile-photo-female-01.jpg"
+    }
+  ],
+  "regions": {
+    "description": "Are you doing projects where the data needs to be saved in a specific region? Make sure you are working in the right one.",
+    "regions": [
+      {
+        "name": "Europe",
+        "url": "https://demo.viktor.ai"
+      },
+      {
+        "name": "United Kingdom",
+        "url": "https://demo.eu2.viktor.ai"
+      },
+      {
+        "name": "USA",
+        "url": "https://demo.us1.viktor.ai"
+      },
+      {
+        "name": "Asia Pacific",
+        "url": "https://demo.ap1.viktor.ai"
+      }
+    ]
+  },
+  "main_content": {
+    "title": "Automate the boring. Engineer the Awesome!",
+    "subtitle": "Unlock the world's engineering potential."
+  }
+}
