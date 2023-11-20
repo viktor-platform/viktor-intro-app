@@ -293,6 +293,7 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% if regions.regions %}
             <h2>REGIONS</h2>
             <p>{{ regions.description }}</p>
                 {% for region in regions.regions %}
@@ -300,6 +301,7 @@
                     <a href="{{ region.url }}" target="_blank" rel="noopener noreferrer" class="contained_secondary_button">{{ region.name }}</a>
                 </div>
                 {% endfor %}
+            {% endif %}
             <h2>SUPPORT</h2>
             <p>For more information, refer to the internal communication channel of {{ company_info.name }}, or refer to VIKTOR's community forum:</p>
             <div class="button-container">
