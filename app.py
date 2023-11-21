@@ -510,7 +510,7 @@ class Controller(ViktorController):
 
 
     # Show final step
-    @WebView("What's next?", duration_guess=10)
+    @WebView("What's next?", duration_guess=1)
     def whats_next(self, **kwargs):
         """Initiates the process of rendering the "What's next?" tab."""
         html_path = Path(__file__).parent / "info_page" / "html_template.html"

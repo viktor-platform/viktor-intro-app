@@ -110,28 +110,26 @@
         }
         .container {
             display: flex;
-            height: 100%;
         }
         .column {
             flex: 0 0 30%; /* Set column width */
             margin-top: 50px;
             padding: 15px;
+            display:flex;
+            align-items: stretch;
         }
 
         .card {
+            display: flex;
             margin: 20px;
             padding: 20px;
             border-radius: 8px;
-            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
-            display: flex;
             flex-direction: column;
+            position: relative;
         }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
         .image-container {
             margin-left:-20px;
             margin-right:-20px;
@@ -146,15 +144,14 @@
         .card-content {
             padding: 15px;
             background-color: #fff;
-            flex-grow: 1;
+            flex-direction: column;
+            margin-bottom: 20px;
         }
+
         .card-content h2 {
             margin-top: 0;
         }
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-        }
+
         .button-container {
             display: flex;
             justify-content: center;
@@ -163,14 +160,13 @@
         }
 
         .card-button-container {
-            display: flex;
-            justify-content: left;
             margin-top: 5px;
             font-size: 12px;
+            position:absolute;
+            bottom: 30px;
         }
 
         .card-button {
-            display: block;
             width: 40%;
             padding: 10px;
             margin-bottom: 10px;
@@ -275,14 +271,12 @@
             </sub-header>
             <div class="container">
                 <div class="column">
-                    <a href="https://www.viktor.ai/customer-cases/" class="card-link">
                         <div class="card">
                             <h2>Want to be inspired?</h2>
                             <div class="image-container">
                                 <img src="https://cms.viktor.ai/uploads/Jacobs_Automate_Engineering_Processes_6dccb0e35f.png">
                             </div>
                             <div class="card-content">
-                                <h3>Customer cases</h3>
                                 <p>See VIKTOR solutions in action through real use cases from industry leaders and success stories.</p>
                             </div>
                             <div class="card-button-container">
@@ -292,14 +286,12 @@
                     </a>
                 </div>
                 <div class="column">
-                    <a href="https://www.viktor.ai/apps-gallery/" class="card-link">
                         <div class="card">
                             <h2>Play and explore</h2>
                             <div class="image-container">
                                 <img src="https://www.viktor.ai/assets/images/platform-powerful-app-1.png">
                             </div>
                             <div class="card-content">
-                                <h3>Apps gallery</h3>
                                 <p>Explore, try, and share ready-to-use app templates and their accompanying source code. Discover what you can do with VIKTOR and use it as inspiration to build your own apps! </p>
                             </div>
                             <div class="card-button-container">
@@ -314,8 +306,7 @@
                         <div class="image-container">
                             <img src="https://www.viktor.ai/assets/illustrations/illustration-platform-step2.png">
                         </div>
-                        <div class="card-content">
-                            <h3>Interested in building your own app?</h3>
+                        <div class="card-content flexible">
                             <p> Get in touch with one of your organization's administrators, and they will provide you with a developer's account.</p>
                         </div>
                     </div>
